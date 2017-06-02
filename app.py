@@ -32,12 +32,14 @@ def webhook():
     # print(res)
     #r = make_response(res)
     #r.headers['Content-Type'] = 'application/json'
-    r = """
-    {
-        "displayText": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F",
-        "speech": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F",
-        "source": "apiai-weather-webhook-sample"
-    }"""
+    res = """
+{
+    "displayText": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F",
+    "speech": "Ayy lmao",
+    "source": "apiai-weather-webhook-sample"
+}"""
+    r = make_response(res)
+    r.headers['Content-Type'] = 'application/json'
     #print(r)
     return r
 
