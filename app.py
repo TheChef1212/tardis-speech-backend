@@ -26,12 +26,14 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = processRequest(req)
+    #res = processRequest(req)
 
-    res = json.dumps(res, indent=4)
+    #res = json.dumps(res, indent=4)
     # print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
+    #r = make_response(res)
+    #r.headers['Content-Type'] = 'application/json'
+    r = '{"displayText": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F","speech": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F","source": "apiai-weather-webhook-sample"}'
+    #print(r)
     return r
 
 
