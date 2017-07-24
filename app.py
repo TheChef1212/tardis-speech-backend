@@ -37,6 +37,7 @@ def webhook():
     "displayText": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F",
     "speech": "Ayy lmao",
     "source": "apiai-weather-webhook-sample2222222222222222222222222222"
+    "contextOut": [{"name":"weather", "lifespan":2, "parameters":{}}]
 }"""
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
