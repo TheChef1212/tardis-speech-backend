@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#hello
+
 from __future__ import print_function
 from future.standard_library import install_aliases
 install_aliases()
@@ -26,22 +26,12 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    #res = processRequest(req)
+    res = processRequest(req)
 
-    #res = json.dumps(res, indent=4)
+    res = json.dumps(res, indent=4)
     # print(res)
-    #r = make_response(res)
-    #r.headers['Content-Type'] = 'application/json'
-    res = """
-{
-    "displayText": "Today in Los Angeles: Partly Cloudy, the temperature is 61 F",
-    "speech": "Ayy lmao",
-    "source": "apiai-weather-webhook-sample2222222222222222222222222222"
-    "test": "test text"
-}"""
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
-    #print(r)
     return r
 
 
